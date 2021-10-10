@@ -1,14 +1,14 @@
 # Site settings
 title: "EliteMint"
 description: "Upgrade to Windows 11 on unsupported hardware. Why Am I Not Losing Weight ? 8 Reasons Why, Losing Weight Ttips. Standards of Care for Individuals ages 0 to 2 years"
-url: "https://elitemint.github.io"  # http://localhost:4000 
+url: "https://elitemint.github.io"  
 
-title_slog: "" # Home pge slog
-title_sep: "" # Home
+title_slog: "" 
+title_sep: "" 
 # verification
-bing: ""
-yandex: ""
-google: ""
+bing: "0382FBAF4E88F841A31C05DECB4AE8A0"
+yandex: "553bec240e157351"
+google: "PwF4hq3mVFBjsCcGrR42uglwh3O2vOvBiF3zZH3rYow"
 # encoding timezone
 encoding: "utf-8"
 timezone: UTC
