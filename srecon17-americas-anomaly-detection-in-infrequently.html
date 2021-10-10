@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//images1-focus-opensocial.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//static.addtoany.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msvalidate.01" content="0382FBAF4E88F841A31C05DECB4AE8A0">
+    <meta name="yandex-verification" content="553bec240e157351">
+    <meta name="google-site-verification" content="PwF4hq3mVFBjsCcGrR42uglwh3O2vOvBiF3zZH3rYow">
+    <meta charset="UTF-8" />
+    <title>SREcon17 Americas - Anomaly Detection in Infrequently Occurred Patterns</title>
+    <meta name="description" content="Anomaly Detection in Infrequently Occurred PatternsDong Wang, Baidu Inc.Anomaly detection is one of the most important works of...">
+	<meta name="keywords" content="usenix,technology,conference">
+    <meta property="og:site_name" content="EliteMint">
+    <meta property="og:url" content="https://elitemint.github.io/srecon17-americas-anomaly-detection-in-infrequently.html">
+    <meta property="og:title" content="SREcon17 Americas - Anomaly Detection in Infrequently Occurred Patterns">
+    <meta property="og:image" content="https://i.ytimg.com/vi/625eMxsr0cg/hqdefault.jpg">
+    <meta property="og:description" content="Anomaly Detection in Infrequently Occurred PatternsDong Wang, Baidu Inc.Anomaly detection is one of the most important works of...">
+    <meta name='twitter:card' content='summary_large_image' />
+    <link rel="canonical" href="https://elitemint.github.io/srecon17-americas-anomaly-detection-in-infrequently.html" />
+    <link rel="stylesheet" href="https://elitemint.github.io/inc/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container py-2"><a class="navbar-brand" href="https://elitemint.github.io/">EliteMint</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-urls" aria-controls="navbar-urls" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <form action="/search/" class="my-2 my-lg-0 offset-md-2 col-md-6 col-sm-12 px-0 mr-auto">
+                <div class="input-group"><input name="s" class="form-control rounded-0 py-2" type="text" placeholder="video search..." id="example-search-input"><span class="input-group-append"><button aria-label="search" role="button" class="btn btn-secondary rounded-0" type="submit"><span class="px-2"><svg class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span></button>
+                    </span>
+                </div>
+                </form>
+                <div class="collapse navbar-collapse flex-md-grow-0" id="navbar-urls">
+
+                </div>
+        </div>
+    </nav>
+    <div class="container min-height-62" >
+        <div class="resp-container" id="top_720"></div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="bg-white"><noscript><a href="https://www.youtube.com/watch?v=625eMxsr0cg"><img alt="SREcon17 Americas - Anomaly Detection in Infrequently Occurred Patterns" src="https://i.ytimg.com/vi/625eMxsr0cg/hqdefault.jpg" /></a></noscript>
+                    <div id="video-player"></div>
+                    <div class="p-3">
+                        <h1 class="h5 video-title bwr">SREcon17 Americas - Anomaly Detection in Infrequently Occurred Patterns</h1>
+                        <div class="py-1 row">
+                            <div class="col-12 col-md-6 my-auto"><b class="text-danger">Share</b></div>
+                            <div class="col-12 col-md-6">
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_reddit"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_whatsapp"></a></div>
+                            </div>
+                        </div>
+                        <div align="center" class="py-1">
+
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-2 bwr"><strong>USENIX</strong><br> Published at : 10 Oct 2021  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="h-100 d-flex align-items-center justify-content-center"><a  target="_blank" rel="noopener" class="btn btn-block btn-danger bwr" href="https://www.youtube.com/watch?v=625eMxsr0cg">Subscribe to USENIX</a></div>
+                                </div>
+                            </div>
+                            <div class="resp-container" id="in_post_bottomads"></div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="text-center bg-light mb-2 p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"></path></svg></span>                                        50 views </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg></span>                                                0 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg></span>                                                0 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="py-1 d-md-block bwr" id="video-description">Anomaly Detection in Infrequently Occurred Patterns<br /><br />Dong Wang, Baidu Inc.<br /><br />Anomaly detection is one of the most important works of SREs. The usual way is to find some frequently occurred traffic patterns, and regards them as the normal value scopes. Any values beyond the scope will be regarded as the anomaly. However in some special dates, especially in some holidays, the traffics show the significantly different patterns. The commonly used alerting strategy usually does not work well. In this talk, we will introduce our approaches used to deal with such issues. Our scenarios are actually more complicated in that, in China, the holidays do not have the fixed calendar dates, and different holidays have absolutely different traffic patterns. However the practical deployment of the methods in this talk shows the pretty satisfying results in terms of alarming precision and recall.<br /><br />View the full SREcon17 Americas Program at <a rel="nofollow" target="blank" href="https://www.usenix.org/conference/srecon17americas/program">https://www.usenix.org/conference/srecon17americas/program</a>
+</div>
+                        <div class="d-none"><span>usenix</span><span>technology</span><span>conference</span></div>
+                        <hr/>
+                        <div class="py-3"><div class="resp-container" id="extra_bottomads"><iframe data-aa="1809247" src="//ad.a-ads.com/1809247?size=468x60" style="width:468px; height:60px; border:0px; padding:0; overflow:hidden; background-color: transparent;" ></iframe>
+</div></div>
+                    </div>
+                </div>
+                <div class="position-sticky fixed-top d-md-block d-none">
+                    <div align="center" class="py-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="mb-4">
+                <div class="resp-container py-3" id="sidebar_300"></div>
+            </div>
+                
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/step-by-step-vol-1-how-to-obtain-reaction.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/lvj-qxLYm1o/mqdefault.jpg" alt="STEP BY STEP| VOL 1| How to Obtain Reaction Function &amp; Nash Equailibrium in Cournot Game">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">STEP BY STEP| VOL 1| How to Obtain Reaction Function &amp; Nash Equailibrium in Cournot Game</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/a-collection-of-funny-videos-on-vibrato-videos.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/NZJBg4N8COk/mqdefault.jpg" alt="A collection of funny videos on vibrato! Videos legend highlights on TikTok. Funniest Short Film #66">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">A collection of funny videos on vibrato! Videos legend highlights on TikTok. Funniest Short Film #66</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/new-15-new-cars-bugatti-limo-and-much-much.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/SuskHAJkZ68/mqdefault.jpg" alt="*NEW* 15 NEW CARS! BUGATTI, LIMO, AND MUCH MUCH MORE! Southwest Florida Update Review">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">*NEW* 15 NEW CARS! BUGATTI, LIMO, AND MUCH MUCH MORE! Southwest Florida Update Review</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/saw-cutouts-for-installations-and-remodeling.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/q7mBWD4vfaI/mqdefault.jpg" alt="Saw cutouts for installations and remodeling">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Saw cutouts for installations and remodeling</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/pi-erre-bourne-couch-audio-listen-to-the.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/n5rgaKinDmc/mqdefault.jpg" alt="Pi&#39;erre Bourne - Couch (Audio)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Pi&#39;erre Bourne - Couch (Audio)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/makaveli-euro2020-aviator-stoiximan-a-rel.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ocL16pElCH4/mqdefault.jpg" alt="ΔΑΣΚΑΛΟΣ MAKAVELI : EURO2020 ΚΑΙΡΑΤ ΑΛΜΑΤΙ ΚΑΙ AVIATOR">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">ΔΑΣΚΑΛΟΣ MAKAVELI : EURO2020 ΚΑΙΡΑΤ ΑΛΜΑΤΙ ΚΑΙ AVIATOR</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/trump-to-establish-1776-commission-to-promote.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/U4YfSVfuoz4/mqdefault.jpg" alt="Trump to establish &#39;1776 Commission&#39; to promote patriotic education">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Trump to establish &#39;1776 Commission&#39; to promote patriotic education</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/blog-post.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/kdktMjJiMDo/mqdefault.jpg" alt="Rothko - Bloodtied (A Continual Search for Origins)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Rothko - Bloodtied (A Continual Search for Origins)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/soaring-official-music-video-princess-power.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nTbqy3eD_2U/mqdefault.jpg" alt="&quot;Soaring&quot; Official Music Video | Princess Power | @Barbie">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">&quot;Soaring&quot; Official Music Video | Princess Power | @Barbie</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/kids-book-read-aloud-how-i-met-my-monster.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/SvLP_CBkckk/mqdefault.jpg" alt="📚 Kids Book Read Aloud: HOW I MET MY MONSTER by Amanda Noll and Howard McWilliam">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">📚 Kids Book Read Aloud: HOW I MET MY MONSTER by Amanda Noll and Howard McWilliam</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/a-murder-mystery-an-airline-bombing-and-the.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/GfxkZrLmzHQ/mqdefault.jpg" alt="A Murder Mystery, an Airline Bombing, and the Last to Hang in Canada">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">A Murder Mystery, an Airline Bombing, and the Last to Hang in Canada</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/chucky-s-trying-to-control-us-again-check.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/vFpv8lkFGLM/mqdefault.jpg" alt="Chucky&#39;s Trying To Control Us AGAIN!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Chucky&#39;s Trying To Control Us AGAIN!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/breaking-pfizer-fetal-cell-whistleblower.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/m1v6RUFupDg/mqdefault.jpg" alt="BREAKING: Pfizer ‘Fetal Cell’ Whistleblower Melissa Strickler has been TERMINATED">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">BREAKING: Pfizer ‘Fetal Cell’ Whistleblower Melissa Strickler has been TERMINATED</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/comelit-tutorial-en-installation-of-additional.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/jxVu5cBRuEE/mqdefault.jpg" alt="COMELIT TUTORIAL(EN):Installation of additional internal monitor(6721W)  in 2-wire Quadra kit">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">COMELIT TUTORIAL(EN):Installation of additional internal monitor(6721W)  in 2-wire Quadra kit</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/live-why-japanese-are-usually-not-overweight.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/BR72tGXIg8w/mqdefault.jpg" alt="🔴LIVE - Why Japanese are usually not overweight?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">🔴LIVE - Why Japanese are usually not overweight?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/reworking-video-interview-software-this-video.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/jctBlk1R1aw/mqdefault.jpg" alt="Reworking - Video Interview Software">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Reworking - Video Interview Software</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/eu-to-provide-major-changes-to-end-ni-protocol.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/BmaktzjZr8U/mqdefault.jpg" alt="EU To Provide &quot;Major&quot; Changes To End NI Protocol Stalemate?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">EU To Provide &quot;Major&quot; Changes To End NI Protocol Stalemate?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/apple-macbook-pro-16-inch-release-date-and.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6rdgAjZPxAc/mqdefault.jpg" alt="Apple MacBook Pro 16 inch Release Date and Price – Spotted ahead of the Launch!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Apple MacBook Pro 16 inch Release Date and Price – Spotted ahead of the Launch!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/humans-of-tech-if-you-ve-got-a-great-idea.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/mbhJOkhxp_o/mqdefault.jpg" alt="Humans of Tech - If you&#39;ve got a great idea, that idea can win">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Humans of Tech - If you&#39;ve got a great idea, that idea can win</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/two-locations-where-heavy-we-po-is-supplied.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/hQcFnymUTrQ/mqdefault.jpg" alt="two locations where heavy we@poñ is supplied to terrørist soldiers bü$ted by ESN, 14 soldiers sent 4">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">two locations where heavy we@poñ is supplied to terrørist soldiers bü$ted by ESN, 14 soldiers sent 4</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/aims-studiare-con-una-accademia-fa-la-differenza.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/XU-KJv_OPXo/mqdefault.jpg" alt="AIMS: studiare con una Accademia fa la differenza!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">AIMS: studiare con una Accademia fa la differenza!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/this-is-more-difficult-than-i-thought-animal.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Hr_UJph73A8/mqdefault.jpg" alt="This is more difficult than I thought... 🌴 Animal Crossing Legacy #2">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">This is more difficult than I thought... 🌴 Animal Crossing Legacy #2</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/how-to-install-a-faucet-br-here-we-watch.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/pW9t2i8SBJg/mqdefault.jpg" alt="Τοποθέτηση μπαταρίας νιπτήρα. How to install a faucet">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Τοποθέτηση μπαταρίας νιπτήρα. How to install a faucet</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/lighters-vs-shredder-the-most-costly-experiment.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/lwRaBFoxla4/mqdefault.jpg" alt="LighterS vs shredder ! The most costly experiment !  Please save my cameras and fill lights !">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">LighterS vs shredder ! The most costly experiment !  Please save my cameras and fill lights !</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/how-to-avoid-suffering-stock-tanks-in-world.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Tfoo8A_l7QE/mqdefault.jpg" alt="How to Avoid Suffering Stock Tanks in World of tanks!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How to Avoid Suffering Stock Tanks in World of tanks!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/online-learning-programs-are-much-more-welcome.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/_iVO-Iokj4c/mqdefault.jpg" alt="Online learning programs are much more welcome these days with a wide range of subjects">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Online learning programs are much more welcome these days with a wide range of subjects</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/the-realm-provided-to-youtube-by-distrokid.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Uw_DwESLxzo/mqdefault.jpg" alt="The Realm">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Realm</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/talents-of-naruto-boruto-characters-i-made.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/mJS4fBaEZ18/mqdefault.jpg" alt="Talents of Naruto/Boruto Characters">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Talents of Naruto/Boruto Characters</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/we-are-radix-an-artificial-intelligence-agency.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/4p6HKClt5wA/mqdefault.jpg" alt="We are Radix - an Artificial Intelligence agency">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">We are Radix - an Artificial Intelligence agency</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/clothes-e-v-s-1-std-4.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/H4BV4HyUmqM/mqdefault.jpg" alt="Clothes | E.V.S 1 | STD 4">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Clothes | E.V.S 1 | STD 4</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/what-a-performance-clayton-v-price-final.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/YTBNvjQb8T0/mqdefault.jpg" alt="WHAT. A. PERFORMANCE. | Clayton v Price | Final Highlights | 2021 BoyleSports World Grand Prix">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">WHAT. A. PERFORMANCE. | Clayton v Price | Final Highlights | 2021 BoyleSports World Grand Prix</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/prayer-is-the-priority-pastor-jentezen-franklin.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qdU41RBgk7w/mqdefault.jpg" alt="Prayer is the Priority | Pastor Jentezen Franklin">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Prayer is the Priority | Pastor Jentezen Franklin</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/great-amount-of-spartan-warrior-challenge.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/_JXUPJaeiBY/mqdefault.jpg" alt="Great Amount of Spartan Warrior Challenge – Animal Revolt Battle Simulator">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Great Amount of Spartan Warrior Challenge – Animal Revolt Battle Simulator</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/doe-s-eat-place-thursday-night-at-doe-s-one.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/LefJ3d7rzpo/mqdefault.jpg" alt="Doe’s Eat Place">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Doe’s Eat Place</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/neater-eater-robotic-an-introduction-neater.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/e06Y_exwuCE/mqdefault.jpg" alt="Neater Eater Robotic: An Introduction | Neater Solutions">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Neater Eater Robotic: An Introduction | Neater Solutions</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/nico-vinz-intrigued-official-music-video.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/iwkth9IdAZE/mqdefault.jpg" alt="Nico &amp; Vinz - Intrigued (Official Music Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Nico &amp; Vinz - Intrigued (Official Music Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/get-set-for-a-dazzling-christmas-in-london.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/uvcGrTOwSFA/mqdefault.jpg" alt="Get set for a dazzling Christmas in London">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Get set for a dazzling Christmas in London</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/pilots-fired-stearman-crash-groundschool.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/jhPHLlvKgw0/mqdefault.jpg" alt="Pilots Fired!  Stearman Crash, GroundSchool Giveaway and other Aviation News TakingOff">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Pilots Fired!  Stearman Crash, GroundSchool Giveaway and other Aviation News TakingOff</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/well-dried-coconuts-are-must-when-making.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-81H6uv50iU/mqdefault.jpg" alt="Well dried coconuts are must when making Desiccated Coconut and sweets &amp; sambols | Traditional Me">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Well dried coconuts are must when making Desiccated Coconut and sweets &amp; sambols | Traditional Me</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/ensemble-sensible-d-ariane-moffatt.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8V9wtwVvF4o/mqdefault.jpg" alt="Ensemble sensible d’Ariane moffatt">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Ensemble sensible d’Ariane moffatt</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/doctor-official-trailer-sivakarthikeyan-nelson.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/oQiH_Iw0kDs/mqdefault.jpg" alt="DOCTOR - Official Trailer | Sivakarthikeyan | Nelson Dilipkumar | Anirudh | Vinay | Yogi Babu">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">DOCTOR - Official Trailer | Sivakarthikeyan | Nelson Dilipkumar | Anirudh | Vinay | Yogi Babu</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/project-x-it-s-alright-to-be-music-submissions.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/XpIDGTWWD5Q/mqdefault.jpg" alt="Project X - It&#39;s Alright To Be">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Project X - It&#39;s Alright To Be</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/meet-marlowe-an-artificial-intelligence-fiction.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/n9CmhFLWvlc/mqdefault.jpg" alt="Meet Marlowe - an artificial intelligence fiction editor!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Meet Marlowe - an artificial intelligence fiction editor!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/sensitive-why-are-we-more-sensitive-at-some.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/lwEDlsXaXe4/mqdefault.jpg" alt="SENSITIVE? - Why are we more sensitive at some stage in our lives?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">SENSITIVE? - Why are we more sensitive at some stage in our lives?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/how-to-uninstall-programs-on-mac-permanently.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8h3YjTvxALM/mqdefault.jpg" alt="How to Uninstall Programs on Mac | Permanently Delete Application on Mac">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How to Uninstall Programs on Mac | Permanently Delete Application on Mac</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/deal-with-the-devil-zubair-sarookh-umm-zubair.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/xHqHGKX0gSg/mqdefault.jpg" alt="Deal With the Devil | Zubair Sarookh">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Deal With the Devil | Zubair Sarookh</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/top-10-best-tv-shows-to-watch-now-2021-in.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qXVF4a_oi3g/mqdefault.jpg" alt="Top 10 Best TV Shows to Watch Now! 2021">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Top 10 Best TV Shows to Watch Now! 2021</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/alexa-said-a-bad-word.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6agLVlRCw-g/mqdefault.jpg" alt="ALexa said a bad word">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">ALexa said a bad word</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/mad-clip-baby-official-music-video-subscribe.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/s124I75lhLs/mqdefault.jpg" alt="Mad Clip - Baby - Official Music Video">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Mad Clip - Baby - Official Music Video</h2>
+    </div>
+
+            </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        function load_vid() { var player = document.getElementById('video-player'); player.innerHTML = labnolThumb(); player.onclick = labnolIframe; } function labnolThumb() { return '<div class="d-flex align-items-center justify-content-center"><div class="image-16by9"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/625eMxsr0cg/hqdefault.jpg"></div><div class="v-play-btn"></div></div>'; } function labnolIframe() { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube-nocookie.com/embed/625eMxsr0cg?rel=0&amp;showinfo=0"); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("allowfullscreen", "1"); var div = document.createElement("div"); div.setAttribute("class", "embed-responsive embed-responsive-16by9"); div.innerHTML = iframe.outerHTML; this.parentNode.replaceChild(div, this); } load_vid()
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <footer class="mt-auto bg-white pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">EliteMint Network</h5>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">DMCA</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3"> © Copyright : <a target="_blank" rel="noopener" href="https://www.youtube.com"> youtube.com</a></div>
+    </footer>
+    <script async="" src="https://elitemint.github.io/js/app.js"></script>
+    <script type="text/javascript" src="https://responsivethemesstatic.github.io/static/wp.js"></script>
+    <script type="text/javascript">
+        if(!Histats_variables){var Histats_variables=[];}
+        Histats_variables.push("tags","https://elitemint.github.io");
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4360507,4,0,0,0,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+</body>
+</html>
