@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: jekyll
 
 on:
   push:
@@ -31,4 +31,3 @@ jobs:
           publish_branch: master
           enable_jekyll: false
           force_orphan: true
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
