@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//images1-focus-opensocial.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//static.addtoany.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msvalidate.01" content="0382FBAF4E88F841A31C05DECB4AE8A0">
+    <meta name="yandex-verification" content="553bec240e157351">
+    <meta name="google-site-verification" content="PwF4hq3mVFBjsCcGrR42uglwh3O2vOvBiF3zZH3rYow">
+    <meta charset="UTF-8" />
+    <title>Installing Windows Admin Center on Windows Server 2019</title>
+    <meta name="description" content="In this video, we will install and use Windows Admin Center on a Windows Server 2019 VM (This VM is part of Active Directory Do...">
+	<meta name="keywords" content="install wac windows server 2019,configure windows server 2019 wac,server 2019 wac">
+    <meta property="og:site_name" content="EliteMint">
+    <meta property="og:url" content="https://elitemint.github.io/installing-windows-admin-center-on-windows.html">
+    <meta property="og:title" content="Installing Windows Admin Center on Windows Server 2019">
+    <meta property="og:image" content="https://i.ytimg.com/vi/E39_MzvCFXA/hqdefault.jpg">
+    <meta property="og:description" content="In this video, we will install and use Windows Admin Center on a Windows Server 2019 VM (This VM is part of Active Directory Do...">
+    <meta name='twitter:card' content='summary_large_image' />
+    <link rel="canonical" href="https://elitemint.github.io/installing-windows-admin-center-on-windows.html" />
+    <link rel="stylesheet" href="https://elitemint.github.io/inc/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+	<!-- Clarity tracking code for https://elitemint.github.io/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "8uznh8kmtg");</script>
+</head>
+<body class="bg-light">
+    <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container py-2"><a class="navbar-brand" href="https://elitemint.github.io/">EliteMint</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-urls" aria-controls="navbar-urls" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <form action="/search/" class="my-2 my-lg-0 offset-md-2 col-md-6 col-sm-12 px-0 mr-auto">
+                <div class="input-group"><input name="s" class="form-control rounded-0 py-2" type="text" placeholder="video search..." id="example-search-input"><span class="input-group-append"><button aria-label="search" role="button" class="btn btn-secondary rounded-0" type="submit"><span class="px-2"><svg class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span></button>
+                    </span>
+                </div>
+                </form>
+                <div class="collapse navbar-collapse flex-md-grow-0" id="navbar-urls">
+
+                </div>
+        </div>
+    </nav>
+    <div class="container min-height-62" >
+        <div class="resp-container" id="top_720"></div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="bg-white"><noscript><a href="https://www.youtube.com/watch?v=E39_MzvCFXA"><img alt="Installing Windows Admin Center on Windows Server 2019" src="https://i.ytimg.com/vi/E39_MzvCFXA/hqdefault.jpg" /></a></noscript>
+                    <div id="video-player"></div>
+                    <div class="p-3">
+                        <h1 class="h5 video-title bwr">Installing Windows Admin Center on Windows Server 2019</h1>
+                        <div class="py-1 row">
+                            <div class="col-12 col-md-6 my-auto"><b class="text-danger">Share</b></div>
+                            <div class="col-12 col-md-6">
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_reddit"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_whatsapp"></a></div>
+                            </div>
+                        </div>
+                        <div align="center" class="py-1">
+
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-2 bwr"><strong>MSFT WebCast</strong><br> Published at : 02 Dec 2021  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="h-100 d-flex align-items-center justify-content-center"><a  target="_blank" rel="noopener" class="btn btn-block btn-danger bwr" href="https://www.youtube.com/watch?v=E39_MzvCFXA">Subscribe to MSFT WebCast</a></div>
+                                </div>
+                            </div>
+                            <div class="resp-container" id="in_post_bottomads"></div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="text-center bg-light mb-2 p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"></path></svg></span>                                        56712 views </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg></span>                                                331 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg></span>                                                34 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="py-1 d-md-block bwr" id="video-description">In this video, we will install and use Windows Admin Center on a Windows Server 2019 VM (This VM is part of Active Directory Domain). So, we can manage Windows servers remotely using this web-based management tool.<br /><br />What is Windows Admin Center (WAC) previously known as Project Honolulu)<br /><br />Windows Admin Center allows Server admin or Infrastructure admin to manage all server Infrastructure using a browser-based management tool.<br /><br />Link to download Setup:<br /><a rel="nofollow" target="blank" href="http://aka.ms/WACDownload">http://aka.ms/WACDownload</a><br /><br />Link for more information:<br /><a rel="nofollow" target="blank" href="https://msftwebcast.com/2019/04/installing-windows-admin-center-on-server-2019.html">https://msftwebcast.com/2019/04/installing-windows-admin-center-on-server-2019.html</a>
+</div>
+                        <div class="d-none"><span>install wac windows server 2019</span><span>configure windows server 2019 wac</span><span>server 2019 wac</span></div>
+                        <hr/>
+                        <div class="py-3"><div class="resp-container" id="extra_bottomads"><iframe data-aa="1809247" src="//ad.a-ads.com/1809247?size=468x60" style="width:468px; height:60px; border:0px; padding:0; overflow:hidden; background-color: transparent;" ></iframe>
+</div></div>
+                    </div>
+                </div>
+                <div class="position-sticky fixed-top d-md-block d-none">
+                    <div align="center" class="py-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="mb-4">
+                <div class="resp-container py-3" id="sidebar_300"></div>
+            </div>
+                
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/lorenzo-bellini-wanting-and-fear-a-mixture.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/bOupw4cP82g/mqdefault.jpg" alt="Lorenzo Bellini - Wanting and Fear (A Mixture Of)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Lorenzo Bellini - Wanting and Fear (A Mixture Of)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/a-ap-rocky-demons-lyrics-welcome-to-paradise.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/BzbGs_hvMvc/mqdefault.jpg" alt="A$AP Rocky - Demons (Lyrics)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">A$AP Rocky - Demons (Lyrics)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/3pm-news-bulletin-25-nov-2021-24-news-hd.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/VXikCUzJ7zE/mqdefault.jpg" alt="3pm News Bulletin | 25 Nov 2021 | 24 News HD">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">3pm News Bulletin | 25 Nov 2021 | 24 News HD</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/get-rid-of-love-handle-no-gym-oblique-tabata.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/UbJXnF94XYk/mqdefault.jpg" alt="GET RID OF LOVE HANDLE (No Gym Oblique Tabata)ㅣ러브핸들 없애는 15분 타바타 복근 운동">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">GET RID OF LOVE HANDLE (No Gym Oblique Tabata)ㅣ러브핸들 없애는 15분 타바타 복근 운동</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/i-wish-i-would-have-casted-this-earlier-free.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/YuYBk_TYHHw/mqdefault.jpg" alt="I wish I would have casted this earlier! | Free for all | Battle for Middle Earth">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">I wish I would have casted this earlier! | Free for all | Battle for Middle Earth</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/luxury-custom-designed-home-in-martha-cove.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/GJ5Y8K1v3RA/mqdefault.jpg" alt="Luxury custom designed home in Martha Cove redefines luxury waterfront living.">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Luxury custom designed home in Martha Cove redefines luxury waterfront living.</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/escape-the-100-layers-of-foam-trending-br.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/vD9vr8B2vRs/mqdefault.jpg" alt="ESCAPE THE 100 LAYERS OF FOAM!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">ESCAPE THE 100 LAYERS OF FOAM!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/couple-bucks-provided-to-youtube-by-translation.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/zucYRYwSvqI/mqdefault.jpg" alt="Couple Bucks">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Couple Bucks</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/tbn24-daily-update-19-october-2021-0-00-00.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/f7Va3klaZJQ/mqdefault.jpg" alt="TBN24 DAILY UPDATE | 19 OCTOBER 2021">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">TBN24 DAILY UPDATE | 19 OCTOBER 2021</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/shan-wu-calls-rittenhouse-case-everything.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/i7nOws_-MyQ/mqdefault.jpg" alt="Shan Wu calls Rittenhouse case &quot;everything that&#39;s wrong with our criminal justice system&quot;">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Shan Wu calls Rittenhouse case &quot;everything that&#39;s wrong with our criminal justice system&quot;</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/plant-life-provided-to-youtube-by-universal.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8yL-7JhqrUQ/mqdefault.jpg" alt="Plant Life">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Plant Life</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/korea-why-korea-is-split-into-north-korea.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Oh6EZf0NyEg/mqdefault.jpg" alt="KOREA का बटवारा कैसे हुआ था? | Why Korea Is Split Into North Korea And South Korea">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">KOREA का बटवारा कैसे हुआ था? | Why Korea Is Split Into North Korea And South Korea</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/hire-a-genuine-audi-service-provider-having.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/mA6dEG7DpcU/mqdefault.jpg" alt="Hire a Genuine Audi Service Provider">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Hire a Genuine Audi Service Provider</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/amazing-fastest-large-wood-sawmill-machines.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/O3cUQrylUoo/mqdefault.jpg" alt="Amazing Fastest Large Wood Sawmill Machines Working, Modern Operated  Sawmills in The Country">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Amazing Fastest Large Wood Sawmill Machines Working, Modern Operated  Sawmills in The Country</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/very-simple-tattoo-designs-of-c-letter-tribal.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/PwoeHTBTvis/mqdefault.jpg" alt="Very simple tattoo designs of C letter || tribal idea and mom Tattoo design ❤️">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Very simple tattoo designs of C letter || tribal idea and mom Tattoo design ❤️</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/big-sean-hit-boy-the-one-quot-what-you-expect.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/f8Q-FvWwXGg/mqdefault.jpg" alt="Big Sean, Hit-Boy - The One">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Big Sean, Hit-Boy - The One</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/animals-reunited-with-owner-after-years-subscribe.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/_AabAODz88c/mqdefault.jpg" alt="Animals Reunited With Owner After Years">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Animals Reunited With Owner After Years</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/364tidi-rough-child-music-video-grm-daily.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/IDXeb5lhxXc/mqdefault.jpg" alt="364TiDi - Rough Child [Music Video] | GRM Daily">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">364TiDi - Rough Child [Music Video] | GRM Daily</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/does-an-iit-tag-matter-does-an-iit-tag-really.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/FBLwzcLkugY/mqdefault.jpg" alt="Does an IIT-Tag Matter?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Does an IIT-Tag Matter?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/the-ultimate-and-luxurious-his-ultimate-and.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/L-ARswc58uw/mqdefault.jpg" alt="The Ultimate and Luxurious">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Ultimate and Luxurious</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/vocal-trance-costa-hanna-finsen-to-tear-us.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/LrVkYdrw2g4/mqdefault.jpg" alt="VOCAL TRANCE: Costa &amp; Hanna Finsen - To Tear Us Apart (Official Music Video) [RNM] + LYRICS">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">VOCAL TRANCE: Costa &amp; Hanna Finsen - To Tear Us Apart (Official Music Video) [RNM] + LYRICS</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/three-ways-to-live-the-life-you-want-petra.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/yXNcYnrAswE/mqdefault.jpg" alt="Three Ways to Live the Life You Want | Petra Velzeboer | TEDxOxford">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Three Ways to Live the Life You Want | Petra Velzeboer | TEDxOxford</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/jim-cramer-reacts-to-big-bank-earnings-i.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/B1sUHWsrmi8/mqdefault.jpg" alt="Jim Cramer reacts to big bank earnings: I am blown away">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Jim Cramer reacts to big bank earnings: I am blown away</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/my-wife-went-fishing-in-alaska-without-me.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/7rXyUkRirYA/mqdefault.jpg" alt="My Wife Went Fishing in Alaska WITHOUT ME!!! Monster Salmon &amp; Broken Fishing Rods">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">My Wife Went Fishing in Alaska WITHOUT ME!!! Monster Salmon &amp; Broken Fishing Rods</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/second-one.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Rx7FOwe45Fc/mqdefault.jpg" alt="Second One">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Second One</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/stores-hit-by-smash-and-grab-robberies-l.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/fCVyTB2V3G4/mqdefault.jpg" alt="Stores hit by smash-and-grab robberies l GMA">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Stores hit by smash-and-grab robberies l GMA</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/story-official-music-video-story-br-buy-stream.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/mFP5_KR1lsg/mqdefault.jpg" alt="Κατερίνα Λιόλιου - Story (Official Music Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Κατερίνα Λιόλιου - Story (Official Music Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/top-class-feat-krysie-provided-to-youtube.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/O2rqmTRBFSA/mqdefault.jpg" alt="Top Class (feat. Krysie)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Top Class (feat. Krysie)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/xur-location-exotics-legendary-items-all.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ezsnto6LWrU/mqdefault.jpg" alt="Xur Location, Exotics &amp; Legendary Items (All Classes) 11-12-21 / November 12, 2021 [Destiny 2]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Xur Location, Exotics &amp; Legendary Items (All Classes) 11-12-21 / November 12, 2021 [Destiny 2]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/why-you-need-an-easy-to-use-and-versatile.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/RiYI1zFn0Yo/mqdefault.jpg" alt="Why you need an easy to use and versatile brake controller">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Why you need an easy to use and versatile brake controller</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/flee-the-facility-halloween-update-br-br.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/FaMPYPAn3hc/mqdefault.jpg" alt="FLEE THE FACILITY HALLOWEEN UPDATE!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">FLEE THE FACILITY HALLOWEEN UPDATE!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/10-more-true-scary-halloween-stories-for.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/caeAp5EdxPA/mqdefault.jpg" alt="10 MORE True Scary HALLOWEEN Stories For Spooky Month">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">10 MORE True Scary HALLOWEEN Stories For Spooky Month</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/nh-m-t-m-nh-3-hai-anh-em-ph-n-299-phim-h.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nQc2Y8O9DGY/mqdefault.jpg" alt="Ở NHÀ MỘT MÌNH 3 | Hai Anh Em Phần 299 | Phim Học Đường Hài Hước Hay Nhất Gãy TV">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Ở NHÀ MỘT MÌNH 3 | Hai Anh Em Phần 299 | Phim Học Đường Hài Hước Hay Nhất Gãy TV</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/10-things-legitimate-can-t-live-without-gq.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/sF_5KE26jas/mqdefault.jpg" alt="10 THINGS LEGITIMATE CAN&#39;T LIVE WITHOUT *GQ PARODY*">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">10 THINGS LEGITIMATE CAN&#39;T LIVE WITHOUT *GQ PARODY*</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/convinced-provided-to-youtube-by-distrokid.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/h8P-p2sC_3E/mqdefault.jpg" alt="Convinced">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Convinced</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/china-sends-hypersonic-glide-vehicle-around.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6kfwS71-GFA/mqdefault.jpg" alt="China Sends Hypersonic Glide Vehicle Around the Globe">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">China Sends Hypersonic Glide Vehicle Around the Globe</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/marcus-martinus-bruno-martini-feel-lyric.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6EvXxE4q8dI/mqdefault.jpg" alt="Marcus &amp; Martinus, Bruno Martini - Feel (Lyric Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Marcus &amp; Martinus, Bruno Martini - Feel (Lyric Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/red-rock-hotel-casino-our-lifestyle-vlog.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Z121k-rxalo/mqdefault.jpg" alt="Red Rock hotel casino, Our lifestyle vlog-80">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Red Rock hotel casino, Our lifestyle vlog-80</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/new-club-league-changes-minor-improvements.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/WJkfhq0E2P4/mqdefault.jpg" alt="New CLUB LEAGUE Changes &amp; Minor Improvements &amp; MORE! | Brawl Stars">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">New CLUB LEAGUE Changes &amp; Minor Improvements &amp; MORE! | Brawl Stars</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/best-scratch-card-win-ever-i-can-not-believe.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/7PPFpH00J_w/mqdefault.jpg" alt="Best scratch card win ever. I can not believe how much I enjoyed this win, it&#39;s a tough card.">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Best scratch card win ever. I can not believe how much I enjoyed this win, it&#39;s a tough card.</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/leslie-clio-make-things-better-2016-leslie.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/WRmRSetiSZE/mqdefault.jpg" alt="LESLIE CLIO - MAKE THINGS BETTER  [2016]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">LESLIE CLIO - MAKE THINGS BETTER  [2016]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/forza-horizon-5-hospital-mini-mix-mixed-by.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/C0cqaTvN-mc/mqdefault.jpg" alt="Forza Horizon 5: Hospital Mini Mix (Mixed By Nu:Tone)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Forza Horizon 5: Hospital Mini Mix (Mixed By Nu:Tone)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/blueyes-anxiety-official-video-listen-to.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/gFJhHm4K6EQ/mqdefault.jpg" alt="Blueyes - Anxiety (Official Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Blueyes - Anxiety (Official Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/programme-management-et-conseil-en-strat.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/APDr3lxEt7s/mqdefault.jpg" alt="Programme Management et conseil en stratégie FAC FOR PRO">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Programme Management et conseil en stratégie FAC FOR PRO</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/study-permit-refused-due-to-a-poor-study.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/vCo3TMgJp6E/mqdefault.jpg" alt="Study Permit Refused due to a Poor Study Plan">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Study Permit Refused due to a Poor Study Plan</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/home-for-sale-2162-firestone-way-click-show.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/unsdXfssFSo/mqdefault.jpg" alt="Home For Sale:  2162 Firestone Way Click &quot;Show More&quot; for more information">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Home For Sale:  2162 Firestone Way Click &quot;Show More&quot; for more information</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/unexpected-moments-to-start-the-day-spearfishing.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/W6I7bh0M32g/mqdefault.jpg" alt="Unexpected Moments to Start the Day |Spearfishing Life 🇬🇷">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Unexpected Moments to Start the Day |Spearfishing Life 🇬🇷</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/aprehend-spray-application-kit-available.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/lELZIa0RgAo/mqdefault.jpg" alt="Aprehend® Spray Application Kit">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Aprehend® Spray Application Kit</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/dogs-are-really-strange-creatures-laugh-at.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/E3mAFY1yaNw/mqdefault.jpg" alt="Dogs Are Really Strange Creatures🤣🤣 LAUGH at FUNNY DOGS compilation">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Dogs Are Really Strange Creatures🤣🤣 LAUGH at FUNNY DOGS compilation</h2>
+    </div>
+
+            </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        function load_vid() { var player = document.getElementById('video-player'); player.innerHTML = labnolThumb(); player.onclick = labnolIframe; } function labnolThumb() { return '<div class="d-flex align-items-center justify-content-center"><div class="image-16by9"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/E39_MzvCFXA/hqdefault.jpg"></div><div class="v-play-btn"></div></div>'; } function labnolIframe() { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube-nocookie.com/embed/E39_MzvCFXA?rel=0&amp;showinfo=0"); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("allowfullscreen", "1"); var div = document.createElement("div"); div.setAttribute("class", "embed-responsive embed-responsive-16by9"); div.innerHTML = iframe.outerHTML; this.parentNode.replaceChild(div, this); } load_vid()
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <footer class="mt-auto bg-white pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">EliteMint Network</h5>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">DMCA</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3"> © Copyright : <a target="_blank" rel="noopener" href="https://www.youtube.com"> youtube.com</a></div>
+    </footer>
+    <script async="" src="https://elitemint.github.io/js/app.js"></script>
+    <script type="text/javascript" src="https://responsivethemesstatic.github.io/static/wp.js"></script>
+    <script type="text/javascript">
+        if(!Histats_variables){var Histats_variables=[];}
+        Histats_variables.push("tags","https://elitemint.github.io");
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4360507,4,0,0,0,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+</body>
+</html>
