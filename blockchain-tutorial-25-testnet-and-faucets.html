@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//images1-focus-opensocial.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//static.addtoany.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msvalidate.01" content="0382FBAF4E88F841A31C05DECB4AE8A0">
+    <meta name="yandex-verification" content="553bec240e157351">
+    <meta name="google-site-verification" content="PwF4hq3mVFBjsCcGrR42uglwh3O2vOvBiF3zZH3rYow">
+    <meta charset="UTF-8" />
+    <title>Blockchain tutorial 25: Testnet and faucets</title>
+    <meta name="description" content="This is part 25 of the Blockchain tutorial explaining what a testnet is and what faucets are.This tutorial explains the followi...">
+	<meta name="keywords" content="blockchain tutorial 25 testnet and faucets,blockchain tutorial 25,testnet and faucets">
+    <meta property="og:site_name" content="EliteMint">
+    <meta property="og:url" content="https://elitemint.github.io/blockchain-tutorial-25-testnet-and-faucets.html">
+    <meta property="og:title" content="Blockchain tutorial 25: Testnet and faucets">
+    <meta property="og:image" content="https://i.ytimg.com/vi/gIZCQUatkes/hqdefault.jpg">
+    <meta property="og:description" content="This is part 25 of the Blockchain tutorial explaining what a testnet is and what faucets are.This tutorial explains the followi...">
+    <meta name='twitter:card' content='summary_large_image' />
+    <link rel="canonical" href="https://elitemint.github.io/blockchain-tutorial-25-testnet-and-faucets.html" />
+    <link rel="stylesheet" href="https://elitemint.github.io/inc/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+	<!-- Clarity tracking code for https://elitemint.github.io/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "8uznh8kmtg");</script>
+</head>
+<body class="bg-light">
+    <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container py-2"><a class="navbar-brand" href="https://elitemint.github.io/">EliteMint</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-urls" aria-controls="navbar-urls" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <form action="/search/" class="my-2 my-lg-0 offset-md-2 col-md-6 col-sm-12 px-0 mr-auto">
+                <div class="input-group"><input name="s" class="form-control rounded-0 py-2" type="text" placeholder="video search..." id="example-search-input"><span class="input-group-append"><button aria-label="search" role="button" class="btn btn-secondary rounded-0" type="submit"><span class="px-2"><svg class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span></button>
+                    </span>
+                </div>
+                </form>
+                <div class="collapse navbar-collapse flex-md-grow-0" id="navbar-urls">
+
+                </div>
+        </div>
+    </nav>
+    <div class="container min-height-62" >
+        <div class="resp-container" id="top_720"></div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="bg-white"><noscript><a href="https://www.youtube.com/watch?v=gIZCQUatkes"><img alt="Blockchain tutorial 25: Testnet and faucets" src="https://i.ytimg.com/vi/gIZCQUatkes/hqdefault.jpg" /></a></noscript>
+                    <div id="video-player"></div>
+                    <div class="p-3">
+                        <h1 class="h5 video-title bwr">Blockchain tutorial 25: Testnet and faucets</h1>
+                        <div class="py-1 row">
+                            <div class="col-12 col-md-6 my-auto"><b class="text-danger">Share</b></div>
+                            <div class="col-12 col-md-6">
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_reddit"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_whatsapp"></a></div>
+                            </div>
+                        </div>
+                        <div align="center" class="py-1">
+
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-2 bwr"><strong>Mobilefish.com</strong><br> Published at : 04 Jan 2022  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="h-100 d-flex align-items-center justify-content-center"><a  target="_blank" rel="noopener" class="btn btn-block btn-danger bwr" href="https://www.youtube.com/watch?v=gIZCQUatkes">Subscribe to Mobilefish.com</a></div>
+                                </div>
+                            </div>
+                            <div class="resp-container" id="in_post_bottomads"></div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="text-center bg-light mb-2 p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"></path></svg></span>                                        11359 views </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg></span>                                                170 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg></span>                                                 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="py-1 d-md-block bwr" id="video-description">This is part 25 of the Blockchain tutorial explaining what a testnet is and what faucets are.<br /><br />This tutorial explains the following:<br />- what a testnet is<br />- what the purpose is of a testnet<br />- show you a Bitcoin testnet block explorer<br />- show you an Ethereum testnet block explorer<br />- what a Bitcoin testnet address looks like<br />- what a faucet is<br /><br />In this video series different topics will be explained which will help you to understand blockchain.<br /><br />Bitcoin released as open source software in 2009 is a cryptocurrency invented by Satoshi Nakamoto (unidentified person or group of persons).<br />After the introduction of Bitcoin many Bitcoin alternatives were created. These alternate cryptocurrencies are called Altcoins (Litecoin, Dodgecoin etc).<br />Bitcoin's underlying technology is called Blockchain.<br />The Blockchain is a distributed decentralized incorruptible database (ledger) that records blocks of digital information. Each block contains a timestamp and a link to a previous block.<br /><br />Soon people realises that there many other use cases where the Blockchain technology can be applied and not just as a cryptocurrency application.<br />New Blockchain platforms were created based on the Blockchain technology, one of which is called Ethereum. <br />Ethereum focuses on running programming code, called smart contracts, on any decentralized application.<br /><br />Using the new Blockchain platforms, Blockchain technology can be used in supply chain management, healthcare, real estate, identity management, voting, internet of things, etcetera, just to name a few.<br />Today there is a growing interest in Blockchain not only in the financial sector but also in other sectors.<br /><br />Explaining how Blockchain works is not easy and for many the Blockchain technology remains an elusive concept.<br />This video series tries to explain Blockchain to a large audience but from the bottom up.<br />Keywords often used in Blockchain conversation will be explained.<br />Each Blockchain video is short and to the point.<br /><br />It is recommended to watch each video sequentially as I may refer to certain Blockchain topics explained earlier.<br />  <br />Check out all my other Blockchain tutorial videos<br /><a rel="nofollow" target="blank" href="https://goo.gl/aMTFHU">https://goo.gl/aMTFHU</a><br /><br />Subscribe to my YouTube channel<br /><a rel="nofollow" target="blank" href="https://goo.gl/61NFzK">https://goo.gl/61NFzK</a><br /><br />The presentation used in this video tutorial can be found at:<br /><a rel="nofollow" target="blank" href="http://www.mobilefish.com/developer/blockchain/blockchain_quickguide_tutorial.html">http://www.mobilefish.com/developer/blockchain/blockchain_quickguide_tutorial.html</a><br /><br />#mobilefish #blockchain #bitcoin #cryptocurrency #ethereum
+</div>
+                        <div class="d-none"><span>blockchain tutorial 25 testnet and faucets</span><span>blockchain tutorial 25</span><span>testnet and faucets</span></div>
+                        <hr/>
+                        <div class="py-3"><div class="resp-container" id="extra_bottomads"><iframe data-aa="1809247" src="//ad.a-ads.com/1809247?size=468x60" style="width:468px; height:60px; border:0px; padding:0; overflow:hidden; background-color: transparent;" ></iframe>
+</div></div>
+                    </div>
+                </div>
+                <div class="position-sticky fixed-top d-md-block d-none">
+                    <div align="center" class="py-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="mb-4">
+                <div class="resp-container py-3" id="sidebar_300"></div>
+            </div>
+                
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/melodic-hyperpop-one-shot-kit-nostalgia-hyperpop.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/XOsUNZznFL4/mqdefault.jpg" alt="Melodic Hyperpop One Shot Kit &quot;Nostalgia&quot; | Hyperpop, Lil Uzi Vert, Retro Vintage, Pop, Melodic">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Melodic Hyperpop One Shot Kit &quot;Nostalgia&quot; | Hyperpop, Lil Uzi Vert, Retro Vintage, Pop, Melodic</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/tilekid-you-not-the-same-slowed-tilekid-you.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/P2u4G9IccCw/mqdefault.jpg" alt="tilekid - you not the same (slowed)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">tilekid - you not the same (slowed)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/win-grom-for-free-with-this-guide-9-0-grom.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/3ZG95RBoSqo/mqdefault.jpg" alt="WIN GROM FOR FREE WITH THIS GUIDE | 9-0 GROM CHALLENGE BEST COMPS &amp; TIPS">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">WIN GROM FOR FREE WITH THIS GUIDE | 9-0 GROM CHALLENGE BEST COMPS &amp; TIPS</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/the-kim-and-kanye-of-sovereign-citizens-get.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/1Cn3AQwY0uU/mqdefault.jpg" alt="The KIM AND KANYE Of Sovereign Citizens Get Arrested">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The KIM AND KANYE Of Sovereign Citizens Get Arrested</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/discursively-undoubtedly-inferno-provided.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/tNqFDuotqlk/mqdefault.jpg" alt="Discursively Undoubtedly (INFERNO)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Discursively Undoubtedly (INFERNO)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/an-easier-way-to-black-out-window-trim-using.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/z-rB1A1qV2s/mqdefault.jpg" alt="An easier way to BLACK OUT WINDOW TRIM using SUPERWRAP!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">An easier way to BLACK OUT WINDOW TRIM using SUPERWRAP!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/learn-english-podcast-17-tips-to-help-you.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/sL3GsB-2_ek/mqdefault.jpg" alt="LEARN ENGLISH PODCAST: 17 TIPS TO HELP YOU SPEAK FLUENT ENGLISH FAST">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">LEARN ENGLISH PODCAST: 17 TIPS TO HELP YOU SPEAK FLUENT ENGLISH FAST</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/graduates-and-students-shaping-the-future.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/GMhXeCeNBkc/mqdefault.jpg" alt="Graduates and Students shaping the future at Vodafone">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Graduates and Students shaping the future at Vodafone</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/xvooted-rearview-mirror-xvooted-rearview.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/OJ6Zjqchdy4/mqdefault.jpg" alt="xvooted - REARVIEW MIRROR">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">xvooted - REARVIEW MIRROR</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/top-10-historical-tv-shows-you-probably-haven.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/WhrVlKVBDds/mqdefault.jpg" alt="Top 10 Historical TV Shows You Probably Haven&#39;t Seen Yet">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Top 10 Historical TV Shows You Probably Haven&#39;t Seen Yet</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/what-is-usually-included-in-a-mommy-makeover.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/VoUHtYPxhDc/mqdefault.jpg" alt="What is usually included in a mommy makeover? | #shorts">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">What is usually included in a mommy makeover? | #shorts</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/shooting-leads-to-crash-in-north-hollywood.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/BsuoHsjFcro/mqdefault.jpg" alt="Shooting Leads To Crash In North Hollywood Saturday">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Shooting Leads To Crash In North Hollywood Saturday</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/choosing-the-proper-grip-part-2-with-steve.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5fqb7wbvLfE/mqdefault.jpg" alt="Choosing the proper grip part 2 with Steve Graham">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Choosing the proper grip part 2 with Steve Graham</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/cardano-is-not-dead-exclusive-content-my.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/iZeIkD8FYhI/mqdefault.jpg" alt="Cardano is not dead.">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Cardano is not dead.</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/bashkimi-komb-tar-deklaratat-rama-kurti-analist.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Pm9nNpYPifo/mqdefault.jpg" alt="BASHKIMI KOMBËTAR, DEKLARATAT RAMA - KURTI  / ANALISTËT NË STUDION E PRESSING">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">BASHKIMI KOMBËTAR, DEKLARATAT RAMA - KURTI  / ANALISTËT NË STUDION E PRESSING</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/introducing-recurring-co-sign-up-free-at.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ND10XwlDzJg/mqdefault.jpg" alt="Introducing recurring.co">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Introducing recurring.co</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/is-garlic-good-for-lung-health-is-garlic.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Jh4jtuKRzOE/mqdefault.jpg" alt="Is Garlic GOOD for Lung Health ❓">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Is Garlic GOOD for Lung Health ❓</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/gop-lawmaker-kamala-harris-has-no-solutions.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/oVQYjVn0Yho/mqdefault.jpg" alt="GOP Lawmaker: Kamala Harris Has &#39;No Solutions That Would End The Crisis On Our Border&#39;">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">GOP Lawmaker: Kamala Harris Has &#39;No Solutions That Would End The Crisis On Our Border&#39;</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/the-411-information-regarding-youtube-september.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/_V0C_2Iz4cw/mqdefault.jpg" alt="The 411 information regarding YouTube, September 26th, and Check-Up Meeting for October 2nd">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The 411 information regarding YouTube, September 26th, and Check-Up Meeting for October 2nd</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/i-got-27530-tokens-nonstop-with-leon-76-quests.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ueEL26y2DY8/mqdefault.jpg" alt="I Got 27530 TOKENS NONSTOP With LEON! ✅ 76 QUESTS! 63 TIERS! Brawl Stars">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">I Got 27530 TOKENS NONSTOP With LEON! ✅ 76 QUESTS! 63 TIERS! Brawl Stars</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/craziest-doomfist-tech-of-all-time-stream.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/MeJP2lPDlhc/mqdefault.jpg" alt="CRAZIEST Doomfist tech of ALL TIME">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">CRAZIEST Doomfist tech of ALL TIME</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/ksi-quits-on-gta-5-order-food-now-at-a-rel.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5PVJEC_bprg/mqdefault.jpg" alt="KSI QUITS ON GTA 5">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">KSI QUITS ON GTA 5</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/inward-universe-residues-lives-desib-l-remix.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/LcbTXv0oEEk/mqdefault.jpg" alt="Inward Universe - Residues Lives (Desib-L Remix)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Inward Universe - Residues Lives (Desib-L Remix)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/dynamic-most-dynamic-br-br-instagram-a-rel.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/o1GXJZ2mNpQ/mqdefault.jpg" alt="Dynamic - Most">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Dynamic - Most</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/kesley-got-accepted-to-another-university.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ZBuSb6ZJxWk/mqdefault.jpg" alt="KESLEY GOT ACCEPTED TO ANOTHER UNIVERSITY | DECIDING WHERE SHE WILL GO TO COLLEGE | THE LEROYS">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">KESLEY GOT ACCEPTED TO ANOTHER UNIVERSITY | DECIDING WHERE SHE WILL GO TO COLLEGE | THE LEROYS</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/the-systematic-investor-165-feat-rob-carver.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nnrG9H7GUzM/mqdefault.jpg" alt="The Systematic Investor #165 | feat. Rob Carver">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Systematic Investor #165 | feat. Rob Carver</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/2001-jackie-wants-to-come-back-2001-jackie.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/G5h9EqHd9KA/mqdefault.jpg" alt="2001  Jackie Wants to Come Back">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">2001  Jackie Wants to Come Back</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/china-urges-us-to-immediately-cancel-arms.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-bWApRVTYeY/mqdefault.jpg" alt="China urges US to &#39;immediately cancel&#39; arms sale to Taiwan">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">China urges US to &#39;immediately cancel&#39; arms sale to Taiwan</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/when-you-re-at-a-party-and-have-5-minutes.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/cuWQ6DJNz4M/mqdefault.jpg" alt="When You&#39;re At A Party And Have 5 Minutes To Impress Your Crush">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">When You&#39;re At A Party And Have 5 Minutes To Impress Your Crush</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/t-evann-falling-by-the-wayside-t-evann-br.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/cc-uXPw2Gp8/mqdefault.jpg" alt="T. Evann - Falling By The Wayside">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">T. Evann - Falling By The Wayside</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/tico-tico-by-dexter-pricey.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/frpc9y4UEu8/mqdefault.jpg" alt="Tico Tico by Dexter &amp; Pricey">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Tico Tico by Dexter &amp; Pricey</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/which-mob-am-i-voting-for-in-minecraft-live.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/R2ZFZte8YTE/mqdefault.jpg" alt="Which Mob Am I Voting For in Minecraft Live 2021?!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Which Mob Am I Voting For in Minecraft Live 2021?!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/big-situation-special-update-of-today-s-thursday.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/01hpBSFMym8/mqdefault.jpg" alt="BIG SITUATION SPECIAL UPDATE OF TODAY&#39;S THURSDAY, DECEMBER 23, 2021">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">BIG SITUATION SPECIAL UPDATE OF TODAY&#39;S THURSDAY, DECEMBER 23, 2021</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/you-know-what-that-means.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ojmHr-zDjUQ/mqdefault.jpg" alt="You know what that means?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">You know what that means?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/vertical-rotary-car-parking-system-vertical.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/i_7r2mpLbM0/mqdefault.jpg" alt="Vertical rotary car parking system">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Vertical rotary car parking system</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/s1-e6-women-in-maintenance-podcast-forging.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/AuMpQ8F9Vf4/mqdefault.jpg" alt="S1:E6 Women in Maintenance Podcast: Forging Strategic Partnerships with Maureen Gribble">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">S1:E6 Women in Maintenance Podcast: Forging Strategic Partnerships with Maureen Gribble</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/the-decisions-somebody-soulful-thangs-volume.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/_cq9jAADROc/mqdefault.jpg" alt="The Decisions - Somebody">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Decisions - Somebody</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/doja-cat-get-into-it-official-video-dojacat.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/rHFuCFPur-A/mqdefault.jpg" alt="Doja Cat - Get Into It (Official Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Doja Cat - Get Into It (Official Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/discount-markt-13-12-2021-18-12-2021-lidl.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/KyCFhQLla-w/mqdefault.jpg" alt="DISCOUNT MARKT Από 13/12/2021 έως 18/12/2021 ΦΥΛΛΑΔΙΟ ΠΡΟΣΦΟΡΩΝ/LIDL/MY MARKET/ΓΑΛΑΞΙΑΣ/λιντλ/VICKO">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">DISCOUNT MARKT Από 13/12/2021 έως 18/12/2021 ΦΥΛΛΑΔΙΟ ΠΡΟΣΦΟΡΩΝ/LIDL/MY MARKET/ΓΑΛΑΞΙΑΣ/λιντλ/VICKO</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/dj6-an-affordable-laser-engraver-for-a-creative.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/lB-zem8Z9UM/mqdefault.jpg" alt="DJ6 - An Affordable Laser Engraver For A Creative Life">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">DJ6 - An Affordable Laser Engraver For A Creative Life</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/1967-ignacio-fleta-irina-kulikova-plays-ballad.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/7gOPLnqH3a0/mqdefault.jpg" alt="1967 Ignacio Fleta - Irina Kulikova plays Ballad for Beautiful Elena">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">1967 Ignacio Fleta - Irina Kulikova plays Ballad for Beautiful Elena</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/kyohei-sorita-s-funny-moment-the-result-of.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/VO0nIc566y0/mqdefault.jpg" alt="Kyohei Sorita&#39;s Funny Moment. The Result Of Chopin Competition 2020 (English Translated).">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Kyohei Sorita&#39;s Funny Moment. The Result Of Chopin Competition 2020 (English Translated).</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/manifesting-for-students-ok-students-let.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/D_uivj9uJAE/mqdefault.jpg" alt="MANIFESTING FOR STUDENTS">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">MANIFESTING FOR STUDENTS</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/how-did-bipin-rawat-helicopter-crashed-helicopter.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/0fMRA5ktIFw/mqdefault.jpg" alt="How Did Bipin Rawat Helicopter Crashed | Helicopter crash compilation">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How Did Bipin Rawat Helicopter Crashed | Helicopter crash compilation</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/what-if-you-could-hear-planets-in-space-no.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Wm8KKZxiUsg/mqdefault.jpg" alt="What If You Could Hear Planets?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">What If You Could Hear Planets?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/the-greatest-hypixel-stats-overlay-download.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/zESvvhIZrpI/mqdefault.jpg" alt="The GREATEST Hypixel Stats Overlay">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The GREATEST Hypixel Stats Overlay</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/satelite-1-pipsqueak-was-here-resounding.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/PSZOeUm_uaw/mqdefault.jpg" alt="SATelite #1 | Pipsqueak was here!!! - &#39;Resounding From a Nearby Wall&#39;">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">SATelite #1 | Pipsqueak was here!!! - &#39;Resounding From a Nearby Wall&#39;</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/best-covers-of-somebody-to-love-queen-from.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nteC2Wzbjv4/mqdefault.jpg" alt="BEST Covers Of &#39;Somebody To Love&#39; - Queen From X Factors Around The World | X Factor Global">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">BEST Covers Of &#39;Somebody To Love&#39; - Queen From X Factors Around The World | X Factor Global</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://elitemint.github.io/household-life-hacks-that-are-really-useful.html">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/oz9ClSzc3zY/mqdefault.jpg" alt="Household Life Hacks That Are Really Useful">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Household Life Hacks That Are Really Useful</h2>
+    </div>
+
+            </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        function load_vid() { var player = document.getElementById('video-player'); player.innerHTML = labnolThumb(); player.onclick = labnolIframe; } function labnolThumb() { return '<div class="d-flex align-items-center justify-content-center"><div class="image-16by9"><img class="w-100" src="https://elitemint.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/gIZCQUatkes/hqdefault.jpg"></div><div class="v-play-btn"></div></div>'; } function labnolIframe() { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube-nocookie.com/embed/gIZCQUatkes?rel=0&amp;showinfo=0"); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("allowfullscreen", "1"); var div = document.createElement("div"); div.setAttribute("class", "embed-responsive embed-responsive-16by9"); div.innerHTML = iframe.outerHTML; this.parentNode.replaceChild(div, this); } load_vid()
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <footer class="mt-auto bg-white pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">EliteMint Network</h5>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">DMCA</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3"> © Copyright : <a target="_blank" rel="noopener" href="https://www.youtube.com"> youtube.com</a></div>
+    </footer>
+    <script async="" src="https://elitemint.github.io/js/app.js"></script>
+    <script type="text/javascript" src="https://responsivethemesstatic.github.io/static/wp.js"></script>
+    <script type="text/javascript">
+        if(!Histats_variables){var Histats_variables=[];}
+        Histats_variables.push("tags","https://elitemint.github.io");
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4360507,4,0,0,0,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+</body>
+</html>
